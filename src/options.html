@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<meta charset="utf-8" />
+
+<style>
+  .form-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 48px;
+  }
+</style>
+
+<form>
+  <label class="form-group"
+    ><span>Hide gray downloading shelf below screen.</span
+    ><mwc-switch checked disabled></mwc-switch
+  ></label>
+  <label class="form-group"
+    ><span>Open downloads page when icon clicked.</span
+    ><mwc-switch checked disabled></mwc-switch
+  ></label>
+  <label class="form-group"
+    ><span>Show number badge of download items.</span
+    ><mwc-switch data-option-key="badge"></mwc-switch
+  ></label>
+  <label class="form-group"
+    ><span>Notify start and completion of download.</span
+    ><mwc-switch data-option-key="notification"></mwc-switch
+  ></label>
+</form>
+
+<script src="options.js"></script>
