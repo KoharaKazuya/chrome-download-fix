@@ -2,7 +2,7 @@
   "name": "download-fix",
   "version": "0.0.0",
   "dependencies": {
-    "@ionic/core": "^5.6.4"
+    "@ionic/core": "^6.0.14"
   },
   "devDependencies": {
     "rollup": "^2.44.0",
