@@ -35,14 +35,16 @@ chrome.downloads.onDeterminingFilename.addListener(refreshDownloadNumberBadge);
 //
 
 function createNotification({ title, filename, icon }) {
-  self.registration.showNotification(title, {
-    body: filename,
-    icon: `icons/${icon}.svg.png`,
+  chrome.notifications.create({
+    type: "basic",
+    iconUrl: `icons/${icon}.svg.png`,
+    title,
+    message: filename,
   });
 }
 
-self.addEventListener("notificationclick", (event) => {
-  event.notification.close();
+chrome.notifications.onClicked.addListener((notificationId) => {
+  chrome.notifications.clear(notificationId);
 });
 
 chrome.downloads.onCreated.addListener(({ state, filename }) => {
