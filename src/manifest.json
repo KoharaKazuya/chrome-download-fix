@@ -3,7 +3,7 @@
   "name": "Chrome Download Fix",
   "version": "0.2.0",
   "icons": { "128": "icons/logo128.png" },
-  "permissions": ["downloads", "downloads.shelf", "notifications", "storage"],
+  "permissions": ["downloads", "downloads.shelf", "storage"],
   "background": {
     "service_worker": "background.js"
   },
